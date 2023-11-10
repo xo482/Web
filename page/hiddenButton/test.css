@@ -1,0 +1,4 @@
+/* 추가 버튼의 초기 상태를 숨겨두기 위해 display 속성을 none으로 설정합니다. */
+#hiddenButton {
+    display: none;
+  }
