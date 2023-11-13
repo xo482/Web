@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Page</title>
+</head>
+<body>
+<textarea id="inputText"></textarea>
+<br>
+<button id="sumitButton" onclick="saveText()">submit</button>
+<script>
+    function saveText() {
+        var text = document.getElementById("inputText").value;
+
+        // AJAX를 사용하여 서버로 데이터 전송
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/api/saveText", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(text));
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // 서버 응답 처리
+                alert(xhr.responseText);
+            }
+        };
+    }
+</script>
+</body>
+</html>

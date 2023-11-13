@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>kimsunghyun</title>
+    <title>Index Page</title>
 </head>
 <body>
-<button id="helloButton">Say Hello</button>
-<div id="response"></div>
+<h1>Welcome ~ !</h1>
+<button id="goToHello">Go to Submit Page</button>
 
-<br>
-<br>
-<br>
-<br>
-<button id="textButton">textButton</button>
-
-<script
-    src="myjs.js">
+<script>
+    // 버튼 요소를 가져오고 클릭 이벤트 리스너를 추가합니다.
+    document.getElementById("goToHello").addEventListener("click", function() {
+        // hello.html로 이동합니다.
+        window.location.href = "hello.html";
+    });
 </script>
 </body>
 </html>
